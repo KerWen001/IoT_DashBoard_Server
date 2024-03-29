@@ -23,6 +23,8 @@ class DataController implements Controller {
 
     private getLatestReadingsFromAllDevices = async (request: Request, response: Response, next: NextFunction) => {
 
+
+
         response.status(200).json(testArr);
     };
 
@@ -31,7 +33,7 @@ class DataController implements Controller {
     };
 
     private getDataAmountByValue = async (request: Request, response: Response, next: NextFunction) => {
-        let result: Number[];
+        let result: Number[] = [];
         for(let i = Number(request.params.id); i < testArr.length && i < Number(request.params.num); i++)
         {
             result.push(testArr[i]);
